@@ -40,7 +40,7 @@
 //滑块
 @property (nonatomic, strong) SKRangeSlider *rangeSlider;
 //时间选择器
-//@property (nonatomic, strong) UIButton *chooseBtn;
+@property (nonatomic, strong) UIButton *chooseBtn;
 @property (nonatomic , strong) SKDatePickerView *dateView;
 
 @end
@@ -49,8 +49,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self rangeSlider];
-//    [self.chooseBtn setTitle:@"时间选择器" forState:UIControlStateNormal];
+//    [self rangeSlider];
+    [self.chooseBtn setTitle:@"时间选择器" forState:UIControlStateNormal];
     // Do any additional setup after loading the view.
 }
 
@@ -137,23 +137,23 @@
     return _rangeSlider;
 }
 
-//-(UIButton *)chooseBtn{
-//    if(!_chooseBtn){
-//        _chooseBtn = [[UIButton alloc] init];
-//        [_chooseBtn setTitleColor:KRGB16HEX(0x000000) forState:UIControlStateNormal];
-//        _chooseBtn.layer.borderWidth = 1;
-//        _chooseBtn.layer.borderColor = KRGB16HEX(0x000000).CGColor;
-//        [_chooseBtn addTarget:self action:@selector(showDataPicker) forControlEvents:UIControlEventTouchUpInside];
-//        [self.view addSubview:_chooseBtn];
-//        [_chooseBtn mas_makeConstraints:^(MASConstraintMaker *make) {
-//            make.width.mas_equalTo(100);
-//            make.height.mas_equalTo(45);
-//            make.centerX.mas_equalTo(0);
+-(UIButton *)chooseBtn{
+    if(!_chooseBtn){
+        _chooseBtn = [[UIButton alloc] init];
+        [_chooseBtn setTitleColor:KRGB16HEX(0x000000) forState:UIControlStateNormal];
+        _chooseBtn.layer.borderWidth = 1;
+        _chooseBtn.layer.borderColor = KRGB16HEX(0x000000).CGColor;
+        [_chooseBtn addTarget:self action:@selector(showDataPicker) forControlEvents:UIControlEventTouchUpInside];
+        [self.view addSubview:_chooseBtn];
+        [_chooseBtn mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.width.mas_equalTo(100);
+            make.height.mas_equalTo(45);
+            make.center.mas_equalTo(0);
 //            make.top.mas_equalTo(self.rangeSlider.mas_bottom).offset(20);
-//        }];
-//    }
-//    return _chooseBtn;
-//}
+        }];
+    }
+    return _chooseBtn;
+}
 
 -(SKDatePickerView *)dateView{
     if(!_dateView){
