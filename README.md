@@ -1,5 +1,7 @@
 # SKThirdLibrary
 OC 实用工具，对AFNetWorking的再次封装、弹框、WebView、常见宏、时间选择器、StepSliderView、常用控件的扩展等等很多，以后会经常更新。
+直接将SKThirdLibrary文件夹拖入工程中，添加头文件即可用。
+简书：https://www.jianshu.com/p/3353b69f2d6c
 
 ## SKRangeSlider
 
